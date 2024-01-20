@@ -5,7 +5,6 @@ interface FormErrorInput {
 }
 
 const FormError: React.FC<FormErrorInput> = ({ message }) => {
-    console.log({message})
     return (
         <div style={{ color: 'red', fontSize: '12px' }}>
          {message}

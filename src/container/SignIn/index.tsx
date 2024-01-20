@@ -22,11 +22,13 @@ const SignIn = () => {
         const email = values.email;
         const password = values.password;
 
-        if(email === "admin@mailinator.com" && password === "Admin@mailinator2024#1"){
-            return router.push('/dashboard');
-        } else {
-            console.log("Incorrect Credentials!");
-        }
+        router.push('/dashboard');
+
+        // if(email === "admin@mailinator.com" && password === "Admin@mailinator2024#1"){
+        //     return router.push('/dashboard');
+        // } else {
+        //     console.log("Incorrect Credentials!");
+        // }
     };
     const formik = useFormik({
 		initialValues:{
