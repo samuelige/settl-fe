@@ -31,8 +31,6 @@ const Users = () => {
     const userInfo = useAppSelector(
         (state) => state.user.user_info);
 
-    console.log(userInfo)
-
     const data = useMemo(() => {
         if (retrieveData) {
             return retrieveData;

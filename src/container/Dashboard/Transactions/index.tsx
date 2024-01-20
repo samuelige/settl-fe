@@ -11,8 +11,6 @@ import {
 import TableCheckbox from '@/_shared/components/Table/TableCheckbox';
 import { Button } from '@mui/material';
 import TableSearch from '@/_shared/components/Table/TableSearch';
-import Image from 'next/image';
-import { plus } from '@/_shared/assets/icons';
 import TableLayout from '@/_shared/components/Table/TableLayout';
 import TablePagination from '@/_shared/components/Table/TablePagination';
 import DataTableCard from '@/_shared/components/DataTableCard';
@@ -23,9 +21,10 @@ import { useAppSelector } from '@/store';
 import { I_User } from '@/types/user';
 import EmptyTransactionsState from './EmptyTransactionsState';
 import Transfer from '../Modal/Transfer';
+import Airtime from '../Modal/Airtime';
 
 const Transactions = () => {
-    const {setBreadcrumbsData, setToggleTransfer} = useContext(AppContext);
+    const {setBreadcrumbsData, setToggleTransfer, setToggleAirtime} = useContext(AppContext);
     const [retrieveData, setRetrieveData] = useState<I_User[]>([]);
 
     const transactionHistory = useAppSelector(
@@ -141,7 +140,7 @@ const Transactions = () => {
                         className="[&.MuiButtonBase-root]:h-[40px] text-sm"
                         // fullWidth
                         disabled={userInfo.length < 1}
-                        onClick={()=>setToggleTransfer(true)}
+                        onClick={()=>setToggleAirtime(true)}
                     >
                         <span className="text-sm font-semibold">Buy airtime</span>
                     </Button>
@@ -180,6 +179,7 @@ const Transactions = () => {
             />
         </DataTableCard>
         <Transfer/>
+        <Airtime/>
         
     </div>
   )

@@ -11,15 +11,13 @@ import {
 
 /* Instruments */
 import { reducer } from "./rootReducer";
-import { customLogger } from "./middlewares/customLogger";
-import { rtkQueryErrorLogger } from "./middlewares/rtkQueryErrorLogger";
 import { setupListeners } from "@reduxjs/toolkit/query";
 
 
-const middleWares = [
-  rtkQueryErrorLogger,
-  customLogger,
-];
+// const middleWares = [
+//   rtkQueryErrorLogger,
+//   customLogger,
+// ];
 
 export const reduxStore = configureStore({
   reducer,
