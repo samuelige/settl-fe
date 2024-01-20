@@ -1,7 +1,7 @@
-import Image from "next/image";
+import SignIn from "@/container/SignIn";
 
 export default function Home() {
   return (
-    <div className="text-red-300">Hello, Samuel</div>
-  );
+    <SignIn/>
+  )
 }

@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "@/styles/globals.css";
+import ContextProvider from "@/_lib/Context/ContextProvider";
+import MuiTheme from "@/_lib/MuiTheme";
+import MainLayout from "@/container/MainLayout";
+import { Providers } from "@/_lib/providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +20,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Providers>
+          <ContextProvider>
+            <MuiTheme>
+              <MainLayout>
+                {children}
+              </MainLayout>
+            </MuiTheme>
+          </ContextProvider>
+        </Providers>
+        <div id="portal-root"></div>
+      </body>
     </html>
   );
 }

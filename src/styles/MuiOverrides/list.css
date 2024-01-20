@@ -1,0 +1,19 @@
+.MuiListItemIcon-root {
+  @apply min-w-[0px] mr-3 !important;
+}
+
+.MuiListItemButton-root {
+  @apply px-6 !important;
+}
+
+.MuiListItemText-root .MuiTypography-root {
+  @apply text-black-200 font-normal text-sm !important;
+}
+
+.MuiListItemButton-root.Mui-selected {
+  @apply bg-primary-100 !important;
+}
+
+.MuiListItemButton-root.Mui-selected .MuiListItemText-root .MuiTypography-root {
+  @apply text-primary-25  !important;
+}
