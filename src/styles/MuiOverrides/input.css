@@ -1,0 +1,17 @@
+.MuiInputBase-root {
+  @apply h-[48px] py-3 rounded-lg border-gray-50 border !important;
+}
+
+.MuiSelect-select {
+  @apply flex flex-row !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  @apply border-none !important;
+}
+
+.MuiInputBase-root.MuiOutlinedInput-root > input::placeholder {
+  @apply opacity-100 text-gray-400 text-base font-normal !important;
+}
+
+
